@@ -33,4 +33,9 @@ final class WeStoreTests: XCTestCase {
         }
     }
 
+    func testGetTotalPrice() {
+        XCTAssert(CalculatedUtil.getTotalPrice(priceOfItem: 19000, quantityOfItem: 2) == 38000)
+        XCTAssert(CalculatedUtil.getTotalPrice(priceOfItem: 20000, quantityOfItem: 4) == 80000)
+        XCTAssert(CalculatedUtil.getTotalPrice(priceOfItem: 1000, quantityOfItem: 6) == 6000)
+    }
 }
